@@ -109,7 +109,10 @@ console.log("Exercise 10 - zPre:", zPre, "x:", x);
 Set testNumber to 0 (a number) and testBoolean to false (a boolean). Write an if statement that compares them using the loose equality operator (==). Inside the if block, log a message confirming they are loosely equal. Explain in a comment why this comparison returns true (due to type coercion). */
 var num = 0;
 var bool = false;
-if (num == bool) console.log("Exercise 11 - loosely equal");
+if (num == bool)
+{
+  console.log("Exercise 11 - loosely equal");
+}
 /*
 JS coerces false to 0 when using ==, so 0 == 0 evaluates true.
 */
@@ -118,8 +121,14 @@ JS coerces false to 0 when using ==, so 0 == 0 evaluates true.
 Set versionA to 10.0 (a number) and versionB to "10.0" (a string). Write an if statement using the strict inequality operator (!==). Log a message if they are not strictly equal, and use an else block to handle the case where they are strictly equal. */
 var vA = 10.0;
 var vB = "10.0";
-if (vA !== vB) console.log("Exercise 12 - not strictly equal");
-else console.log("Exercise 12 - strictly equal");
+if (vA !== vB)
+{
+  console.log("Exercise 12 - not strictly equal");
+}
+else
+{
+  console.log("Exercise 12 - strictly equal");
+}
 
 /** ------Exercise 13: Logical OR and AND Combination------
 Set three boolean variables: isLoggedIn, isSubscriber, and isTrialExpired. 
@@ -128,29 +137,55 @@ Access is granted if (isLoggedIn is true AND isSubscriber is true) OR if (isLogg
 var logged = true;
 var sub = false;
 var trialExp = false;
-if ((logged && sub) || (logged && !trialExp)) console.log("Exercise 13 - Access granted");
-else console.log("Exercise 13 - Access denied");
+if ((logged && sub) || (logged && !trialExp)) 
+{
+console.log("Exercise 13 - Access granted");
+}
+else 
+{  
+console.log("Exercise 13 - Access denied");
+}
+
 
 /** ------Exercise 14: Simulating XOR using Nested Conditionals-------
 Simulate the Logical XOR operator (either A is true or B is true, but NOT BOTH) using variables conditionA and conditionB. Use a combination of if statements and logical operators to achieve this. Log "XOR Success" if the condition is met, otherwise log "XOR Fail". */
 var condA = true;
 var condB = false;
-if ((condA || condB) && !(condA && condB)) console.log("Exercise 14 - XOR Success");
-else console.log("Exercise 14 - XOR Fail");
+if ((condA || condB) && !(condA && condB))
+{
+  console.log("Exercise 14 - XOR Success");
+}
+else 
+{
+  console.log("Exercise 14 - XOR Fail");
+}
+
 
 /** ------Exercise 15: Converting IF/ELSE to Ternary Operator------
-Write an initial if/else statement that checks if a variable scriptLoadType (initialized to "deferred") is equal to "deferred". If true, assign the string "Non-blocking" to a variable loadStatus. Otherwise, assign "Potentially Blocking". Then, rewrite the entire conditional structure using only the Ternary Operator (? :) and store the result in a new variable loadStatusTernary. */
+Write an initial if/else statement that checks if a variable scriptLoadType (initialized to "deferred") 
+is equal to "deferred". If true, assign the string "Non-blocking" to a variable loadStatus. 
+Otherwise, assign "Potentially Blocking". 
+Then, rewrite the entire conditional structure using only the Ternary Operator (? :) and store 
+the result in a new variable loadStatusTernary. */
 var loadType = "deferred";
 var loadStat;
-if (loadType === "deferred") loadStat = "Non-blocking";
-else loadStat = "Potentially Blocking";
+if (loadType === "deferred")
+{ 
+  loadStat = "Non-blocking";
+}
+else 
+{
+loadStat = "Potentially Blocking";
+}
 console.log("Exercise 15 - if/else:", loadStat);
 var loadStatT = (loadType === "deferred") ? "Non-blocking" : "Potentially Blocking";
 console.log("Exercise 15 - ternary:", loadStatT);
 
+
 // ========================
 // Set 4: Integration and Application
 // ========================
+
 
 /** ------Exercise 16: Commenting and Code Structure------
 *************************************************************
@@ -196,8 +231,12 @@ dataInput is strictly equal to the string "number".
 If it is, log "Input is numeric." 
 If it is not, reassign dataInput to the boolean value true, and then log the new type using typeof. */
 var data = 484;
-if (typeof data === "number") console.log("Exercise 19 - Input is numeric.");
-else {
+if (typeof data === "number") 
+{
+console.log("Exercise 19 - Input is numeric.");
+}
+else 
+{
   data = true;
   console.log("Exercise 19 - new type:", typeof data);
 }
