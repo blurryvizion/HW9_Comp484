@@ -5,7 +5,7 @@
 
 /** ------Exercise 1: Complex Arithmetic and Standard Rules.------ */
 var res = 3 + 5 * (10 / 2) - (8 - 4);
-console.log("Exercise 1 - result:", res);
+console.log("\nExercise 1 - result:", res);
 
 
 /** ------Exercise 2: Case Sensitivity Test------**/
@@ -13,21 +13,21 @@ var projId = "COMP484";
 // ProjectIdentifier = "JS_Advanced"; 
 // The line above would fail because JavaScript is case-sensitive.
 projId = "JS_Advanced";
-console.log("Exercise 2 - projectIdentifier:", projId);
+console.log("\nExercise 2 - projectIdentifier:", projId);
 
 
 /** ------Exercise 3: String Quoting Challenge------
 Declare a variable named courseDescription using var and camelCase. 
 Assign it the string value: The course is "interactive" and involves 'scripting' logic.*/
 var courseDesc = "The course is \"interactive\" and involves 'scripting' logic.";
-console.log("Exercise 3 - courseDescription:", courseDesc);
+console.log("\nExercise 3 - courseDescription:", courseDesc);
 
 
 /** ------Exercise 4: Escaping and Console Output------
 Declare a variable named errorMessage and assign it a string defined using single quotes. 
 The string content must be: An internal server error occurred: "Access Denied".*/
 var errMsg = 'An internal server error occurred: \"Access Denied\"';
-console.log("Exercise 4 - errorMessage:", errMsg);
+console.log("\nExercise 4 - errorMessage:", errMsg);
 
 
 /** ------Exercise 5: Type Coercion with Non-Plus Operators------
@@ -38,7 +38,7 @@ var a = 10;
 var b = "4";
 var subRes = a - b;
 var mulRes = a * b;
-console.log("Exercise 5 - resultSubtraction:", subRes, "type:", typeof subRes);
+console.log("\nExercise 5 - resultSubtraction:", subRes, "type:", typeof subRes);
 console.log("Exercise 5 - resultMultiplication:", mulRes, "type:", typeof mulRes);
 
 
@@ -52,7 +52,7 @@ Declare a variable unassignedVar without giving it a value.
 Declare a second variable explicitNull and set its value explicitly to null. */
 var undef;
 var nullVal = null;
-console.log("Exercise 6 - typeof unassignedVar:", typeof undef);
+console.log("\nExercise 6 - typeof unassignedVar:", typeof undef);
 console.log("Exercise 6 - typeof explicitNull:", typeof nullVal);
 /********************************************************************************
 typeof null returns "object" because of a historical implementation quirk.
@@ -67,7 +67,7 @@ Then, reassign isBlocking to the string value "true" (with quotes).
 Use console.log(typeof isBlocking) after each assignment to demonstrate 
 how JavaScript variables are weakly typed and hold typed values. */
 var block = true;
-console.log("Exercise 7 - typeof isBlocking (boolean):", typeof block);
+console.log("\nExercise 7 - typeof isBlocking (boolean):", typeof block);
 block = "true";
 console.log("Exercise 7 - typeof isBlocking (string):", typeof block);
 
@@ -86,7 +86,7 @@ Initialize a variable counterValue to 50. In a single sequence of statements, fi
 var cnt = 50;
 cnt /= 5;
 cnt -= 3;
-console.log("Exercise 9 - counterValue:", cnt);
+console.log("\nExercise 9 - counterValue:", cnt);
 
 /** ------Exercise 10: Prefix vs. Postfix Unary Operators------
 Initialize a variable x to 10.
@@ -96,10 +96,10 @@ Initialize a variable x to 10.
 Use comments to explain how the placement of the unary operator (++ before or after) affects the timing of the increment relative to the assignment. */
 var x = 10;
 var yPost = x++;
-console.log("Exercise 10 - yPost:", yPost, "x:", x);
+console.log("\nExercise 10 - yPost:", yPost, "x:", x);
 x = 10;
 var zPre = ++x;
-console.log("Exercise 10 - zPre:", zPre, "x:", x);
+console.log("\nExercise 10 - zPre:", zPre, "x:", x);
 // Postfix (x++) increments after assignment; Prefix (++x) increments before.
 
 // ========================
@@ -107,12 +107,14 @@ console.log("Exercise 10 - zPre:", zPre, "x:", x);
 // ========================
 
 /** ------Exercise 11: Loose Equality and Coercion------
-Set testNumber to 0 (a number) and testBoolean to false (a boolean). Write an if statement that compares them using the loose equality operator (==). Inside the if block, log a message confirming they are loosely equal. Explain in a comment why this comparison returns true (due to type coercion). */
+Set testNumber to 0 (a number) and testBoolean to false (a boolean). 
+Write an if statement that compares them using the loose equality operator (==). 
+Inside the if block, log a message confirming they are loosely equal. */
 var num = 0;
 var bool = false;
 if (num == bool)
 {
-  console.log("Exercise 11 - loosely equal");
+  console.log("\nExercise 11 - loosely equal");
 }
 /*
 JS coerces false to 0 when using ==, so 0 == 0 evaluates true.
@@ -124,41 +126,41 @@ var vA = 10.0;
 var vB = "10.0";
 if (vA !== vB)
 {
-  console.log("Exercise 12 - not strictly equal");
+  console.log("\nExercise 12 - not strictly equal");
 }
 else
 {
-  console.log("Exercise 12 - strictly equal");
+  console.log("\nExercise 12 - strictly equal");
 }
 
 /** ------Exercise 13: Logical OR and AND Combination------
 Set three boolean variables: isLoggedIn, isSubscriber, and isTrialExpired. 
 Write an if condition using logical operators (&& and ||) that checks if access should be granted.
 Access is granted if (isLoggedIn is true AND isSubscriber is true) OR if (isLoggedIn is true AND isTrialExpired is false). */
-var logged = true;
-var sub = false;
-var trialExp = false;
-if ((logged && sub) || (logged && !trialExp)) 
+var isLoggedIn = true;
+var isSubscriber = false;
+var isTrialExpired = false;
+if ((isLoggedIn && isSubscriber) || (isLoggedIn && !isTrialExpired)) 
 {
-console.log("Exercise 13 - Access granted");
+console.log("\nExercise 13 - Access granted");
 }
 else 
 {  
-console.log("Exercise 13 - Access denied");
+console.log("\nExercise 13 - Access denied");
 }
 
 
 /** ------Exercise 14: Simulating XOR using Nested Conditionals-------
 Simulate the Logical XOR operator (either A is true or B is true, but NOT BOTH) using variables conditionA and conditionB. Use a combination of if statements and logical operators to achieve this. Log "XOR Success" if the condition is met, otherwise log "XOR Fail". */
-var condA = true;
-var condB = false;
-if ((condA || condB) && !(condA && condB))
+var A = true;
+var B = false;
+if ((A || B) && !(A && B))
 {
-  console.log("Exercise 14 - XOR Success");
+  console.log("\n Exercise 14 - XOR Success\n");
 }
 else 
 {
-  console.log("Exercise 14 - XOR Fail");
+  console.log("\nExercise 14 - XOR Fail");
 }
 
 
@@ -178,9 +180,9 @@ else
 {
 loadStat = "Potentially Blocking";
 }
-console.log("Exercise 15 - if/else:", loadStat);
+console.log("\nExercise 15 - if/else:", loadStat);
 var loadStatT = (loadType === "deferred") ? "Non-blocking" : "Potentially Blocking";
-console.log("Exercise 15 - ternary:", loadStatT);
+console.log("\nExercise 15 - ternary:", loadStatT);
 
 
 // ========================
@@ -205,7 +207,7 @@ var m = d.getMonth() + 1;
 var day = d.getDate();
 var y = d.getFullYear();
 var dateStr = "Today is " + m + "/" + day + "/" + y;
-console.log("Exercise 17 - formatted date:", dateStr);
+console.log("\nExercise 17 - formatted date:", dateStr);
 
 
 /** ------Exercise 18: Mixed Type Arithmetic Explanation------
@@ -216,7 +218,7 @@ var v1 = 20;
 var v2 = "5";
 var sum = v1 + v2;
 var diff = v1 - v2;
-console.log("Exercise 18 - sum:", sum, "diff:", diff);
+console.log("\nExercise 18 - sum:", sum, "diff:", diff);
 /*****************************************************************
 "+" performs string concatenation if one operand is a string.
 "-" converts both operands to numbers.
@@ -234,12 +236,12 @@ If it is not, reassign dataInput to the boolean value true, and then log the new
 var data = 484;
 if (typeof data === "number") 
 {
-console.log("Exercise 19 - Input is numeric.");
+console.log("\nExercise 19 - Input is numeric.");
 }
 else 
 {
   data = true;
-  console.log("Exercise 19 - new type:", typeof data);
+  console.log("\nExercise 19 - new type:", typeof data);
 }
 
 
