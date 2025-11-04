@@ -34,6 +34,7 @@ console.log("Exercise 4 - errorMessage:", errMsg);
 Set valueA to the number 10 and valueB to the string "4".
 Calculate resultSubtraction using the subtraction operator (-) and 
 resultMultiplication using the multiplication operator (*).*/
+var a = 10;
 var b = "4";
 var subRes = a - b;
 var mulRes = a * b;
